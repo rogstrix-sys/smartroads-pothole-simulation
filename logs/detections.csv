@@ -1,0 +1,5 @@
+Timestamp,Latitude,Longitude,Cam_70Pct,IMU_30Pct,Fused_Score_Pct,Severity,Snapshot_Path
+16:18:49,26.912598,75.787316,29%,5%,22%,SMALL,logs/snapshots/defect_1787568529228.jpg
+16:18:55,26.912922,75.787316,52%,36%,47%,MEDIUM,logs/snapshots/defect_1787568535134.jpg
+16:19:06,26.913435,75.787316,90%,89%,89%,CRITICAL,logs/snapshots/defect_1787568546229.jpg
+16:19:12,26.913678,75.787316,32%,4%,23%,SMALL,logs/snapshots/defect_1787568552033.jpg

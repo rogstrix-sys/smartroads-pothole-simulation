@@ -1,0 +1,6 @@
+path: C:/Users/kedia/pothole_simulation/benchmark_pothole_data
+train: train/images
+val: valid/images
+test: test/images
+names:
+  0: pothole

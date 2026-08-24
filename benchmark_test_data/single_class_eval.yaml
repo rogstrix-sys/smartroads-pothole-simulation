@@ -1,0 +1,6 @@
+path: C:/Users/kedia/pothole_simulation/benchmark_test_data/coco8
+train: images/train
+val: images/val
+test: images/val
+names:
+  0: pothole

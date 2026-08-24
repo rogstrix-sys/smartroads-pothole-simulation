@@ -1,0 +1,431 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/road/protos/StraightRoadSegment.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/buildings/protos/Building.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/bmw/BmwX5Simple.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.06702808977041252 -0.11973158014972451 0.990541056138805 3.014515733824907
+  position 51.98821279060738 3.4448941537067608 9.643827152645237
+  follow "CAR_NODE"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DirectionalLight {
+  ambientIntensity 0.7
+  direction 0.3 -1 -0.6
+  intensity 1.6
+  castShadows TRUE
+}
+Floor {
+  translation 250 0 -0.01
+  size 600 140
+  tileSize 2 2
+  appearance PBRAppearance {
+    baseColor 0.25 0.25 0.25
+    roughness 0.9
+  }
+}
+StraightRoadSegment {
+  name "main_avenue"
+  width 8
+  length 500
+}
+Building {
+  translation 25 -18 0
+  name "b1"
+  corners [
+    -14 -8
+    14 -8
+    14 8
+    -14 8
+  ]
+}
+Building {
+  translation 80 -19 0
+  name "b2"
+  corners [
+    -16 -9
+    16 -9
+    16 9
+    -16 9
+  ]
+}
+Building {
+  translation 140 -18 0
+  name "b3"
+  corners [
+    -15 -8
+    15 -8
+    15 8
+    -15 8
+  ]
+}
+Building {
+  translation 205 -19 0
+  name "b4"
+  corners [
+    -18 -9
+    18 -9
+    18 9
+    -18 9
+  ]
+}
+Building {
+  translation 275 -18 0
+  name "b5"
+  corners [
+    -16 -8
+    16 -8
+    16 8
+    -16 8
+  ]
+}
+Building {
+  translation 345 -19 0
+  name "b6"
+  corners [
+    -15 -9
+    15 -9
+    15 9
+    -15 9
+  ]
+}
+Building {
+  translation 420 -18 0
+  name "b7"
+  corners [
+    -14 -8
+    14 -8
+    14 8
+    -14 8
+  ]
+}
+Building {
+  translation 30 19 0
+  name "b8"
+  corners [
+    -15 -8
+    15 -8
+    15 8
+    -15 8
+  ]
+}
+Building {
+  translation 95 20 0
+  name "b9"
+  corners [
+    -18 -10
+    18 -10
+    18 10
+    -18 10
+  ]
+}
+Building {
+  translation 160 19 0
+  name "b10"
+  corners [
+    -14 -8
+    14 -8
+    14 8
+    -14 8
+  ]
+}
+Building {
+  translation 230 20 0
+  name "b11"
+  corners [
+    -16 -9
+    16 -9
+    16 9
+    -16 9
+  ]
+}
+Building {
+  translation 300 19 0
+  name "b12"
+  corners [
+    -15 -8
+    15 -8
+    15 8
+    -15 8
+  ]
+}
+Building {
+  translation 370 20 0
+  name "b13"
+  corners [
+    -18 -10
+    18 -10
+    18 10
+    -18 10
+  ]
+}
+Building {
+  translation 445 19 0
+  name "b14"
+  corners [
+    -15 -8
+    15 -8
+    15 8
+    -15 8
+  ]
+}
+DEF Pothole_1 Solid {
+  translation 22 1.75 0.002
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "textures/asphalt_fracture.png"
+          ]
+        }
+        roughness 0.95
+      }
+      geometry Plane {
+        size 0.32 0.32
+      }
+    }
+  ]
+  name "Pothole_1"
+  boundingObject Cylinder {
+    height 0.004
+    radius 0.16
+  }
+}
+DEF Pothole_2 Solid {
+  translation 58 1.75 0.002
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "textures/dirt_pothole.png"
+          ]
+        }
+        roughness 0.98
+      }
+      geometry Plane {
+        size 0.9 0.9
+      }
+    }
+  ]
+  name "Pothole_2"
+  boundingObject Cylinder {
+    height 0.012
+    radius 0.42
+  }
+}
+DEF Pothole_3 Solid {
+  translation 115 1.75 0.002
+  children [
+    Transform {
+      scale 1.8 0.75 1
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "textures/gravel_pothole.png"
+              ]
+            }
+            roughness 0.95
+          }
+          geometry Plane {
+            size 1.2 1.2
+          }
+        }
+      ]
+    }
+  ]
+  name "Pothole_3"
+  boundingObject Cylinder {
+    height 0.02
+    radius 0.55
+  }
+}
+DEF Pothole_4 Solid {
+  translation 142 1.75 0.002
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "textures/asphalt_fracture.png"
+          ]
+        }
+        roughness 0.95
+      }
+      geometry Plane {
+        size 0.28 0.28
+      }
+    }
+  ]
+  name "Pothole_4"
+  boundingObject Cylinder {
+    height 0.003
+    radius 0.14
+  }
+}
+DEF Pothole_5 Solid {
+  translation 235 1.75 0.002
+  children [
+    Transform {
+      scale 1.8 1.4 1
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "textures/dirt_pothole.png"
+              ]
+            }
+            roughness 1
+          }
+          geometry Plane {
+            size 1.8 1.8
+          }
+        }
+      ]
+    }
+  ]
+  name "Pothole_5"
+  boundingObject Cylinder {
+    height 0.03
+    radius 0.8
+  }
+}
+DEF Pothole_6 Solid {
+  translation 310 1.75 0.002
+  children [
+    Transform {
+      rotation 0 0 1 0.4
+      scale 1.2 0.8 1
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "textures/gravel_pothole.png"
+              ]
+            }
+            roughness 0.95
+          }
+          geometry Plane {
+            size 0.95 0.95
+          }
+        }
+      ]
+    }
+  ]
+  name "Pothole_6"
+  boundingObject Cylinder {
+    height 0.014
+    radius 0.44
+  }
+}
+DEF Pothole_7 Solid {
+  translation 348 1.75 0.002
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "textures/asphalt_fracture.png"
+          ]
+        }
+        roughness 0.95
+      }
+      geometry Plane {
+        size 0.3 0.3
+      }
+    }
+  ]
+  name "Pothole_7"
+  boundingObject Cylinder {
+    height 0.004
+    radius 0.15
+  }
+}
+DEF Pothole_8 Solid {
+  translation 420 1.75 0.002
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "textures/dirt_pothole.png"
+          ]
+        }
+        roughness 0.98
+      }
+      geometry Plane {
+        size 0.85 0.85
+      }
+    }
+  ]
+  name "Pothole_8"
+  boundingObject Cylinder {
+    height 0.012
+    radius 0.4
+  }
+}
+DEF Pothole_9 Solid {
+  translation 465 1.75 0.002
+  children [
+    Transform {
+      scale 1.8 1.3 1
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "textures/dirt_pothole.png"
+              ]
+            }
+            roughness 1
+          }
+          geometry Plane {
+            size 1.6 1.6
+          }
+        }
+      ]
+    }
+  ]
+  name "Pothole_9"
+  boundingObject Cylinder {
+    height 0.028
+    radius 0.7
+  }
+}
+DEF CAR_NODE Robot {
+  translation 0 1.75 0.35
+  children [
+    BmwX5Simple {
+      translation 0 0 0
+    }
+    Camera {
+      translation 2 0 1.5
+      rotation 0 1 0 0.22
+      name "pothole_cam"
+      fieldOfView 1.2
+      width 640
+      height 480
+    }
+    Accelerometer {
+    }
+    GPS {
+    }
+  ]
+  name "car_robot"
+  controller "<extern>"
+  supervisor TRUE
+}

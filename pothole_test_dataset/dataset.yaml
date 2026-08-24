@@ -1,0 +1,7 @@
+path: C:/Users/kedia/pothole_simulation/pothole_test_dataset
+train: valid/images
+val: valid/images
+test: valid/images
+
+names:
+  0: pothole

@@ -1,0 +1,17 @@
+﻿# Virtual Environments & Conda
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# Heavy training datasets, raw caches & training runs
+dataset/
+new_9k_data/
+new_22k_data/
+runs/
+*.zip
+
+# Generated local test runs
+logs/snapshots/*
+!logs/snapshots/.gitkeep

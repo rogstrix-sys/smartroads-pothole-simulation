@@ -1,0 +1,142 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/StraightRoadSegment.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/bmw/BmwX5Simple.proto"
+
+WorldInfo {
+  basicTimeStep 32
+  coordinateSystem "NUE"
+}
+
+Viewpoint {
+  orientation 0 1 0 3.14159
+  position 1.75 3.0 -12
+}
+
+TexturedBackground {}
+TexturedBackgroundLight {}
+
+StraightRoadSegment {
+  translation 0 0 0
+  name "road"
+  width 7.0
+  numberOfLanes 2
+  length 120
+}
+
+# --- Pothole 1: Minor Crack (LOW) ---
+DEF Pothole_1 Solid {
+  translation 20 0.001 1.75
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.08 0.08 0.08
+        roughness 0.95
+      }
+      geometry Cylinder {
+        height 0.001
+        radius 0.25
+      }
+    }
+  ]
+  name "Pothole_1"
+  boundingObject Cylinder {
+    height 0.006
+    radius 0.25
+  }
+}
+
+# --- Pothole 2: Medium Defect (MEDIUM) ---
+DEF Pothole_2 Solid {
+  translation 45 0.001 1.75
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.05 0.05 0.05
+        roughness 0.95
+      }
+      geometry Cylinder {
+        height 0.001
+        radius 0.45
+      }
+    }
+  ]
+  name "Pothole_2"
+  boundingObject Cylinder {
+    height 0.012
+    radius 0.45
+  }
+}
+
+# --- Pothole 3: Severe Crater (CRITICAL) ---
+DEF Pothole_3 Solid {
+  translation 70 0.001 1.75
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.02 0.02 0.02
+        roughness 1.0
+      }
+      geometry Cylinder {
+        height 0.001
+        radius 0.65
+      }
+    }
+  ]
+  name "Pothole_3"
+  boundingObject Cylinder {
+    height 0.022
+    radius 0.65
+  }
+}
+
+# --- Pothole 4: Elongated Fault (CRITICAL) ---
+DEF Pothole_4 Solid {
+  translation 95 0.001 1.75
+  children [
+    Transform {
+      scale 1.8 1.0 0.7
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.01 0.01 0.01
+            roughness 1.0
+          }
+          geometry Cylinder {
+            height 0.001
+            radius 0.50
+          }
+        }
+      ]
+    }
+  ]
+  name "Pothole_4"
+  boundingObject Cylinder {
+    height 0.018
+    radius 0.50
+  }
+}
+
+# --- BMW Car ---
+DEF BMW_CAR BmwX5Simple {
+  translation 0 0.0 1.75
+  rotation 0 1 0 0
+  controller "vehicle_supervisor"
+  sensorsSlotFront [
+    Camera {
+      name "camera"
+      translation 0 0.4 0.2
+      rotation 0 1 0 0.25
+      width 640
+      height 480
+    }
+    Accelerometer {
+      name "accelerometer"
+    }
+    GPS {
+      name "gps"
+    }
+  ]
+}
